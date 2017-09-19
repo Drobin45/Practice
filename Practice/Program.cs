@@ -23,7 +23,7 @@ namespace Practice
 
 
             // Problem Three. Given an array of numbers, return the highest number in that array
-            int[] numbers = { 1, 2, 3, 4, 5, 6 };
+            int[] numbers = { 5, 2, 3, 4, 1, 6 };
             //int highNum = blue.Max();              
             int highNum = GreatestNum(numbers);
             Console.WriteLine(highNum);
@@ -36,15 +36,29 @@ namespace Practice
 
         public static int GreatestNum(int[] numbers)
         {
+            int max = 0;
             for (int i = 0; i >= numbers.Length; i++)
-                if (numbers(i) > numbers(i + 1))
+            {
+                if (numbers[i] > max)
+                {
+                    max = numbers[i];
+                   continue;
+                }
+                if (numbers[i] < max)
                 {
                     continue;
-                }
-                else if (numbers(i) = numbers.Length)
-                {
-                    return numbers(i);
-                }
+                }                    
+            }
+            return max;
+
+            //if (numbers(i) > numbers(i + 1))
+            //{
+            //    continue;
+            //}
+            //else if (numbers(i) = numbers.Length)
+            //{
+            //    return numbers(i);
+            //}
         }
 
         //------------------------------------------------------
