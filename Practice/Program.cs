@@ -15,7 +15,7 @@ namespace Practice
             //bool answer = CheckPal(bill);
             //Console.WriteLine(answer);
 
-            //Problem Two
+            //Problem Two. Given two numbers return the highest of the two numbers
 
             //int first = int.Parse(Console.ReadLine());
             //int second = int.Parse(Console.ReadLine());
@@ -23,43 +23,33 @@ namespace Practice
 
 
             // Problem Three. Given an array of numbers, return the highest number in that array
-            int[] numbers = { 5, 2, 3, 4, 1, 6 };
-            //int highNum = blue.Max();              
-            int highNum = GreatestNum(numbers);
-            Console.WriteLine(highNum);
-
+            //Max() Method is a built in method that already returns the highest int in an array.
+            //int[] numbers = { 5, 2, 3, 4, 1, 6 };
+            //Console.WriteLine(GreatestNum(numbers));
 
 
         } //Method separation bracket ------------------------------------------------------
 
         //Problem Three Method
 
-        public static int GreatestNum(int[] numbers)
-        {
-            int max = 0;
-            for (int i = 0; i >= numbers.Length; i++)
-            {
-                if (numbers[i] > max)
-                {
-                    max = numbers[i];
-                   continue;
-                }
-                if (numbers[i] < max)
-                {
-                    continue;
-                }                    
-            }
-            return max;
-
-            //if (numbers(i) > numbers(i + 1))
-            //{
-            //    continue;
-            //}
-            //else if (numbers(i) = numbers.Length)
-            //{
-            //    return numbers(i);
-            //}
-        }
+        //public static int GreatestNum(int[] numbers)
+        //{
+        //    int max = 0;
+        //    foreach (int value in numbers)
+        //    {
+                
+        //        if (value > max)
+        //        {
+        //            max = value;
+        //            continue;
+        //        }
+        //        if ( value < max)
+        //        {
+        //            continue;
+        //        }                
+        //    }
+        //    return max;
+        //}
 
         //------------------------------------------------------
 
