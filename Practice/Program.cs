@@ -24,29 +24,52 @@ namespace Practice
 
             // Problem Three. Given an array of numbers, return the highest number in that array
             //Max() Method is a built in method that already returns the highest int in an array.
+
             //int[] numbers = { 5, 2, 3, 4, 1, 6 };
             //Console.WriteLine(GreatestNum(numbers));
 
+            //Problem Four. Given an array of numbers, write a method that returns only even numbers
+
+            int[] numbers = { 1, 2, 3, 4, 5 };
+            Console.WriteLine(EvenNum(numbers));
 
         } //Method separation bracket ------------------------------------------------------
 
-        //Problem Three Method
+        //Problem Four Method
+
+        static int EvenNum(int[] numbers)
+        {
+            // return (from i in numbers where i % 2 == 0 select (int)i).Sum();
+            int total = 0;
+            int i;
+            for (i = 0; i > numbers.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    total += i;                    
+                    
+                }
+            }
+            return total;
+        }
+
+        // Problem Three Method
 
         //public static int GreatestNum(int[] numbers)
         //{
         //    int max = 0;
         //    foreach (int value in numbers)
         //    {
-                
+
         //        if (value > max)
         //        {
         //            max = value;
         //            continue;
         //        }
-        //        if ( value < max)
+        //        if (value < max)
         //        {
         //            continue;
-        //        }                
+        //        }
         //    }
         //    return max;
         //}
