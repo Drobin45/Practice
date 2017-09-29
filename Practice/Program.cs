@@ -30,15 +30,33 @@ namespace Practice
 
             //Problem Four. Given an array of numbers, write a method that returns only even numbers
 
-           // int[] numbers = { 1, 2, 3, 4, 5 };
-           // Console.WriteLine(EvenNum(numbers));
+            // int[] numbers = { 1, 2, 3, 4, 5 };
+            // Console.WriteLine(EvenNum(numbers));
 
-           //Problem Five
+            //Problem Five. Create an empty array that the user types in. Sum the total of this array without Sum().
+            //int[] numbers = new int[6];
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    Console.WriteLine("Please enter a single interger");
+            //    i = int.Parse(Console.ReadLine());                
+            //}
+            
+            //Console.WriteLine(Total(numbers));
+
 
         } //Method separation bracket ------------------------------------------------------
 
         //Problem Five Method
-
+        //static int Total(int[] numbers)
+        //{
+        //    int sum = 0;
+        //    foreach(int i in numbers)
+        //    {                
+        //            sum += i;                
+        //    }
+        //    return sum;
+        //}
 
         //Problem Four Method
 
