@@ -41,11 +41,28 @@ namespace Practice
             //    Console.WriteLine("Please enter a single interger");
             //    i = int.Parse(Console.ReadLine());                
             //}
-            
+
             //Console.WriteLine(Total(numbers));
+
+            //Problem Six. Given an array, create a method that will reverse the array
+
+            int[] number = {1, 2, 3, 4};
+            //Array.Reverse(number);
+            Console.WriteLine(number);
+            //Console.WriteLine(Invert(number));
 
 
         } //Method separation bracket ------------------------------------------------------
+
+        //Problem Six Method
+
+        //static int Invert(int[] number)
+        //{
+        //    for (int i = 0; i < number.Length % 2; i++)
+        //    {
+
+        //    }
+        //}
 
         //Problem Five Method
         //static int Total(int[] numbers)
