@@ -30,28 +30,33 @@ namespace Practice
 
             //Problem Four. Given an array of numbers, write a method that returns only even numbers
 
-            int[] numbers = { 1, 2, 3, 4, 5 };
-            Console.WriteLine(EvenNum(numbers));
+           // int[] numbers = { 1, 2, 3, 4, 5 };
+           // Console.WriteLine(EvenNum(numbers));
+
+           //Problem Five
 
         } //Method separation bracket ------------------------------------------------------
 
+        //Problem Five Method
+
+
         //Problem Four Method
 
-        static int EvenNum(int[] numbers)
-        {
-            // return (from i in numbers where i % 2 == 0 select (int)i).Sum();
-            int total = 0;
-            int i;
-            for (i = 0; i > numbers.Length; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    total += i;                    
-                    
-                }
-            }
-            return total;
-        }
+        //static int EvenNum(int[] numbers)
+        //{                     
+        //    int sum = 0;
+        //    foreach (int i in numbers)
+        //    {                
+        //        if (i % 2 == 0)
+        //        {
+        //            sum += i;
+        //        }                
+        //    }
+        //    return sum;
+        //}
+
+        //Advanced way of solving. Need to learn how 'select (int)i)' works
+        // return (from i in numbers where i % 2 == 0 select (int)i).Sum();
 
         // Problem Three Method
 
