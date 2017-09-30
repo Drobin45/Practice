@@ -47,22 +47,61 @@ namespace Practice
             //Problem Six. Given an array, create a method that will reverse the array
 
             int[] number = {1, 2, 3, 4};
+
+                //Using Array.Reverse to reverse the int[]
+            //foreach(int value in number)
+            //{
+            //    Console.WriteLine(value);
+            //}
             //Array.Reverse(number);
-            Console.WriteLine(number);
-            //Console.WriteLine(Invert(number));
+
+            //foreach (int value in number)
+            //{
+            //    Console.WriteLine(value);
+            //}
+            foreach(int value in number)
+            {
+                Console.WriteLine(value);
+            }
+            
+            Console.WriteLine(Invert(number));
+
+            foreach (int value in number)
+            {
+                Console.WriteLine(value);
+            }
+
+
+            //Test for ReverseString Method
+            // Console.WriteLine(ReverseString("framework"));
 
 
         } //Method separation bracket ------------------------------------------------------
 
         //Problem Six Method
 
-        //static int Invert(int[] number)
+        //Method for reversing a string
+        //public static string ReverseString(string s)
         //{
-        //    for (int i = 0; i < number.Length % 2; i++)
-        //    {
-
-        //    }
+        //    char[] arr = s.ToCharArray();
+        //    Array.Reverse(arr);
+        //    return new string(arr);
         //}
+
+        public static int[] Invert(int[] number)
+        {
+            for (int i = 0; i < number.Length % 2; i++)
+            {
+                //for(int j = number.Length; j > number.Length % 2; j--)
+                //{
+                //    number[j] = number[i];
+                //}  
+                int tmp = number[i];
+                number[i] = number[number.Length - i - 1];
+                number[number.Length - i - 1] = tmp;
+            }
+            return number;
+        }
 
         //Problem Five Method
         //static int Total(int[] numbers)
