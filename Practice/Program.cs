@@ -46,62 +46,83 @@ namespace Practice
 
             //Problem Six. Given an array, create a method that will reverse the array
 
-            int[] number = {1, 2, 3, 4};
+            //int[] number = {1, 2, 3, 4};
 
-                //Using Array.Reverse to reverse the int[]
+            //    //Using Array.Reverse to reverse the int[]
+            ////foreach(int value in number)
+            ////{
+            ////    Console.WriteLine(value);
+            ////}
+            ////Array.Reverse(number);
+
+            ////foreach (int value in number)
+            ////{
+            ////    Console.WriteLine(value);
+            ////}
             //foreach(int value in number)
             //{
             //    Console.WriteLine(value);
             //}
-            //Array.Reverse(number);
+
+            //Console.WriteLine(Invert(number));
 
             //foreach (int value in number)
             //{
             //    Console.WriteLine(value);
             //}
-            foreach(int value in number)
-            {
-                Console.WriteLine(value);
-            }
-            
-            Console.WriteLine(Invert(number));
-
-            foreach (int value in number)
-            {
-                Console.WriteLine(value);
-            }
 
 
             //Test for ReverseString Method
             // Console.WriteLine(ReverseString("framework"));
 
+            //Problem Seven. Make a method to see if a given word is a palindrome
+            string pali = Console.ReadLine();
+            Console.WriteLine(PaliCheck(pali));
+
 
         } //Method separation bracket ------------------------------------------------------
 
+        //Problem Seven Method
+
+        public static bool PaliCheck(string s)
+        {
+            char[] arr = s.ToCharArray();
+            Array.Reverse(arr);            
+            if (new string(arr) == s)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
         //Problem Six Method
 
-        //Method for reversing a string
-        //public static string ReverseString(string s)
-        //{
-        //    char[] arr = s.ToCharArray();
-        //    Array.Reverse(arr);
-        //    return new string(arr);
-        //}
+        ////Method for reversing a string
+        ////public static string ReverseString(string s)
+        ////{
+        ////    char[] arr = s.ToCharArray();
+        ////    Array.Reverse(arr);
+        ////    return new string(arr);
+        ////}
 
-        public static int[] Invert(int[] number)
-        {
-            for (int i = 0; i < number.Length % 2; i++)
-            {
-                //for(int j = number.Length; j > number.Length % 2; j--)
-                //{
-                //    number[j] = number[i];
-                //}  
-                int tmp = number[i];
-                number[i] = number[number.Length - i - 1];
-                number[number.Length - i - 1] = tmp;
-            }
-            return number;
-        }
+        //public static int[] Invert(int[] number)
+        //{
+        //    for (int i = 0; i < number.Length % 2; i++)
+        //    {
+        //        //for(int j = number.Length; j > number.Length % 2; j--)
+        //        //{
+        //        //    number[j] = number[i];
+        //        //}  
+        //        int tmp = number[i];
+        //        number[i] = number[number.Length - i - 1];
+        //        number[number.Length - i - 1] = tmp;
+        //    }
+        //    return number;
+        //}
 
         //Problem Five Method
         //static int Total(int[] numbers)
