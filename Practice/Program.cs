@@ -76,13 +76,13 @@ namespace Practice
             // Console.WriteLine(ReverseString("framework"));
 
             //Problem Seven. Make a method to see if a given word is a palindrome
-            //string pali = Console.ReadLine();
-            //Console.WriteLine(PaliCheck(pali));
+            string pali = "aabaa";
+            Console.WriteLine(checkPalindrome(pali));
 
             //Problem Eight. FizzBuzz. Given numbers 1-100, make a program that when the number is a multiple of 3 ...
             // ... it prints Fizz. When it is a multiple of 5, it prints Buzz. When it is both a multiple of 3 and 5, print FizzBuzz
             //int i = 0;
-            //for (i = 1; i <100; i++)
+            //for (i = 1; i < 100; i++)
             //{
             //    if (i % 3 == 0 && i % 5 == 0)
             //    {
@@ -102,6 +102,7 @@ namespace Practice
             //    }
             //}
 
+            //Problem Nine. Write a method that takes in 4 numbers and outputs the average
 
         } //Method separation bracket ------------------------------------------------------
 
@@ -109,9 +110,9 @@ namespace Practice
 
         //public static bool PaliCheck(string s)
         //{
-        //    char[] arr = s.ToCharArray();
-        //    Array.Reverse(arr);            
-        //    if (new string(arr) == s)
+        //char[] arr = s.ToCharArray();
+        //Array.Reverse(arr);            
+        //    if (new string (arr) == s)
         //    {
         //        return true;
         //    }
@@ -120,6 +121,19 @@ namespace Practice
         //        return false;
         //    }
         //}
+
+        // Second way of checking for a Palindrome without using outside methods
+        static bool checkPalindrome(string inputString)
+        {
+            int i;
+            int j;
+            for (i = 0; i < (inputString.Length / 2); i++)
+            {
+                if (inputString[i] != inputString[inputString.Length - i - 1])
+                    return false;
+            }
+            return true;
+        }
 
 
         //Problem Six Method
