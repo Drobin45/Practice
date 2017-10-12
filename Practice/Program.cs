@@ -76,8 +76,8 @@ namespace Practice
             // Console.WriteLine(ReverseString("framework"));
 
             //Problem Seven. Make a method to see if a given word is a palindrome
-            string pali = "aabaa";
-            Console.WriteLine(checkPalindrome(pali));
+            //string pali = "aabaa";
+            //Console.WriteLine(checkPalindrome(pali));
 
             //Problem Eight. FizzBuzz. Given numbers 1-100, make a program that when the number is a multiple of 3 ...
             // ... it prints Fizz. When it is a multiple of 5, it prints Buzz. When it is both a multiple of 3 and 5, print FizzBuzz
@@ -102,9 +102,39 @@ namespace Practice
             //    }
             //}
 
-            //Problem Nine. Write a method that takes in 4 numbers and outputs the average
+            //Problem Nine. Create a method that, given an array of positive integers, it will...
+            //...find the pair of adjacent elements that has the largest product and return that product.
+
+            int[] testOne = {1, 2, 3, 4, 5};
+            Console.WriteLine(adjacentElementsProduct(testOne));
 
         } //Method separation bracket ------------------------------------------------------
+
+        //Problem Nine Method
+
+        static int adjacentElementsProduct(int[] inputArray)
+        {
+            int i;
+            int j;
+            int prod = 0;
+            for (i = 0; i < inputArray.Length; i++)
+            {
+                for (j = (i + 1); j < inputArray.Length; j++)
+                {
+                    if (inputArray[i] * inputArray[j] > prod)
+                    {
+                        prod = inputArray[i] * inputArray[j];
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+                }
+            }
+            return prod;
+        }
 
         //Problem Seven Method
 
@@ -123,17 +153,17 @@ namespace Practice
         //}
 
         // Second way of checking for a Palindrome without using outside methods
-        static bool checkPalindrome(string inputString)
-        {
-            int i;
-            int j;
-            for (i = 0; i < (inputString.Length / 2); i++)
-            {
-                if (inputString[i] != inputString[inputString.Length - i - 1])
-                    return false;
-            }
-            return true;
-        }
+        //static bool checkPalindrome(string inputString)
+        //{
+        //    int i;
+        //    int j;
+        //    for (i = 0; i < (inputString.Length / 2); i++)
+        //    {
+        //        if (inputString[i] != inputString[inputString.Length - i - 1])
+        //            return false;
+        //    }
+        //    return true;
+        //}
 
 
         //Problem Six Method
